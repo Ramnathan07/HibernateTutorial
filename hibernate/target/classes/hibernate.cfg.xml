@@ -1,0 +1,21 @@
+<hibernate-configuration xmlns="http://www.hibernate.org/xsd/orm/cfg">
+    <session-factory>
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/hibernate</property>
+        <property name="hibernate.connection.username">postgres</property>
+        <property name="hibernate.connection.password">1234</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="hibernate.show_sql">true</property>
+
+        <mapping class="org.example.employee"/>
+        <mapping class="org.example.Laptop"/>
+<!--        above line shows the sql command used by hibernate-->
+   </session-factory>
+</hibernate-configuration>
+
+<!--        hbm stands to Hibernate Mapping and ddl stand for data definition in-->
+<!--        DDL (Data Definition Language) commands in SQL are used to define and modify the structure of a database. -->
+<!--        These commands include CREATE, ALTER, DROP, TRUNCATE, RENAME, and COMMENT.
+in line number 8 if we have to create table we have to write create
+if you have to insert then write update
+-->
